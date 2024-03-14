@@ -36,7 +36,7 @@ jobs:
         mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
         mysql database: ${{ secrets.DB }} # Optional, default value is "test". The specified database which will be create
         mysql user: ${{ secrets.DB_USER }} # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
-        mysql password: ${{ secrets.DatabasePassword }} # Required if "mysql user" exists. The password for the "mysql user"
+        mysql password: ${{ secrets.DB_PASSWORD }} # Required if "mysql user" exists. The password for the "mysql user"
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: gradlew에 실행 권한 부여
