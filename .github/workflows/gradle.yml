@@ -27,6 +27,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: setting MySQL
     - uses: mirromutth/mysql-action@v1.1
       with:
         character set server: 'utf8' # Optional, default value is 'utf8mb4'. The '--character-set-server' option for mysqld
