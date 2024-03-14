@@ -28,6 +28,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Setup MySQL
+      uses: samin/mysql-action@v1
+      with:
+        character set server: 'utf8'
+        mysql database: ${{ secrets.DB }}
+        mysql user: ${{ secrets.DB_USER }}
+        mysql password: ${{ secrets.DB_PASSWORD }}
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: gradlew에 실행 권한 부여
